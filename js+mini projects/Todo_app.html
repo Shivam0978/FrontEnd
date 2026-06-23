@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDO-App</title>
+   <link rel="stylesheet" href="Todo_app.css">
+  <style>
+   
+
+  </style>
+</head>
+<body>
+  <span><button class="clearStatus" onclick="clearStatus()">R</button></span>
+  <span><button class="clearAll" onclick="clearAll()">C</button> </span>
+
+  <div class="heading">ToDo-App</div>
+  <div class="goalAdder">
+  <input type="text" class="firstTodo" placeholder="Enter your goal">
+  <input class="firstdate" type="date">
+  <input type="time" class="firsttime" >
+  <button class="adding" onclick="addTodo(); addDate();addTime()">Add</button>
+  <h2 class="headstatus">Status</h2>
+
+  </div>
+  <div class="todoWrapper">
+<div class="Items-display"></div>
+  </div>
+  
+  <script src="Todo_app.js"></script>
+
+</body>
+</html>
+
+

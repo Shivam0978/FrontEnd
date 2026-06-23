@@ -1,0 +1,113 @@
+*{
+
+    box-sizing: border-box;
+}
+#heading{
+text-align: center;
+color:blue;
+background-color:rgb(158, 245, 180);
+padding:10px;
+}
+.button{
+    background-color: rgb(161, 224, 126);
+    color:rgb(24, 1, 5);
+    font-size: large;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid green;
+    font-size:25px;
+    cursor: pointer;
+    
+    
+}
+
+
+#container{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    flex-wrap: wrap;
+    animation:dropdown 1.5s ease-out;
+   
+  
+}
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#result{
+    margin: 10% 0px 0px 0px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#title{
+    text-align: center;
+    width:80%;
+    max-width:800px;
+    padding:10px;
+    background-color: rgb(249, 116, 107);
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    height:200px;
+    width:200px;
+    object-fit:cover;
+}
+a{
+    text-decoration: none;
+
+}
+.game2{
+    text-align: center;
+    color:black;
+    padding:100px;
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    /* background-image: url('../js/images/pitch.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+
+    margin:0;
+    min-height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(255,255,255,0.6)),
+
+    url('../js/images/pitch.png');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;  
+
+}
+.reset{
+    background-color: rgb(79, 183, 244);
+    color:antiquewhite;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin:3px;
+}
+@keyframes dropdown{
+    from{
+        transform: translateY(-200px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(-0px);
+        opacity:1;
+    }
+}
+

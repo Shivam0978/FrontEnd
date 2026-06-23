@@ -1,0 +1,258 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javasc7</title>
+ </head>
+ <body>
+  <script>
+                          //synchronous and asynchronous\\
+//   //synchronous :- code runs in a particular sequence like from line by line 
+//   //sync eg.
+//   console.log("lin1");
+//   console.log("lin2");
+//   console.log("lin3");
+
+//   //async eg.
+//   console.log("line1");
+//   setTimeout(()=>{console.log("hey! your package will be 78lakhsPA");},2000);
+//   console.log("line2");
+//   console.log("line3");
+
+  
+//   // asynchronous :- sometime some codes takes more time than the next codes and there asynchronous works to continue the codes and if a certain code take more time than allow the next code to run along with that code.
+
+//                         // Callback\\
+//   //Callback:- whenever we pass one function in another function , it is called callback
+
+//   // Callback Hell:- whenever nested callbacks occur i.e more and more function in a single function than called Callback hell.(become complex)
+
+//   //eg.
+//   function greet(name){
+//     console.log(`Congratulations ${name}! you have been qualified`);
+//   }
+//   function failed(name){
+//     console.log(`Dont lose hope ${name}, better next time`);
+//   }
+//   function Selection(name,marks){
+   
+//     if (marks>70){
+//       greet(name);
+//     }
+//     else{
+//      failed(name);
+//     }
+
+//   }
+// Selection("shivam", 85);
+
+//               // callback hell//
+
+//      /* here is a function in which we are passing two varibales, now we use one variable as dataID and other as a function*/
+// function getData(dataID,getNextData){
+//   setTimeout(()=> {
+//     console.log("data",dataID);
+//     if(getNextData){
+//       getNextData();
+//     }
+//   },2000);
+//}
+/* while calling the function we declared the same function inside thus the output will be like
+(after 2 sec)
+data 1
+(after 2 sec)
+data 2 
+...*/
+// getData(1,()=>{
+//   console.log("fetching data 2...")
+//   getData(2,()=>{
+//     console.log("Fetching data 3...")
+//     getData(3);
+//   });
+// });
+
+     
+
+
+//                //Promise\\
+//   // promise is for 'eventual' completion of the task , it is an object i.e promise basically use kiya jata hai kisi task ko achieve krne ke liye it can either success or failed 
+//  /* 
+//  fulfill (resolved/successed)
+//  rejected
+//  pending
+//  *resolve and reject are the callback provided by js
+//  */
+//   let promise1 = new Promise((resolve,reject)=> {console.log("hello earth!");
+//     resolve("success");
+//   });
+
+//   let promise2 = new Promise((resolve,reject)=> {console.log("hello earth!");
+//     reject("Error");
+//   });
+
+
+function getData(dataID){ //now we dont need getNextData
+  return new Promise((resolve,reject)=>{
+  setTimeout(()=> {
+    console.log("data",dataID);
+    resolve("passed");
+    
+  },2000);
+});
+}
+             // promise chain
+   //method1
+// getData(1).then((res)=>{
+//   console.log(res);
+//   getData(2).then((res)=>{
+//     console.log(res);
+//   }); 
+// })
+  //method2
+
+  // getData(1)
+  // .then((res)=>{
+  //   return getData(2);
+  // })
+  // .then((res)=>{
+  //   return getData(3);
+  // })
+  // .then((res)=>{
+  //   console.log(res)
+  // })
+         
+            // async and await
+  // async function Fetcher(){
+  //   console.log("Getting all data...");
+  //   await getData(1);
+  //   await getData(2);
+  //   await (getData(3));
+  // }
+  // console.log(Fetcher())
+
+       // using IIFE (immediately invoked function expression)    [only use once]
+  
+(async function (){ 
+
+   console.log("Getting all data...");
+    await getData(1);
+    await getData(2);
+    await (getData(3));
+  })();
+
+// //       .then() & .catch()
+// /* 
+// promise.then((res)=>{...}) :- used when the promise is fulfilled , it will run only aftyer fulfilled.
+// promise.catch():- it runs whenever there  is an error.
+// */
+// let promise3 = function(){
+//   return new Promise((resolve,reject)=> {
+//     console.log("Be careful!");
+//    // resolve("success");
+//    reject("suspended");
+//   });
+// }
+
+// let promise4 = promise3();
+// //promise4.then(()=>{
+//   //console.log("promise fulfilled");
+//   promise4.catch((err)=>{
+//     console.log("rejected")
+//   });
+   
+//   function async(){
+//   return new Promise ((resolve,reject)=>{
+//     setTimeout(()=>{
+//       console.log("username:-shiee32");
+//       resolve("User Verified");},5000);
+
+//     });
+//   }
+//   console.log("Verifiying...");
+//   let k=async();
+//   k.then((res)=>{
+//     console.log(res);
+//   });
+ 
+      // callback using pormise
+  function async2(username){
+    return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      console.log(`Verifying for ${username}...`);
+      resolve("username verified");},2000);
+    });
+  }
+  function async3(password){
+    return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      console.log(`Verifying for ${password}...`);
+      resolve("password verified");},3000);
+    });
+  }
+
+  // console.log("checking for username ");
+  // let k1=async2("mohan420");
+  // k1.then((res)=>{
+  //   console.log(res);
+  //   console.log("checking for password ");
+  //    let k2=async3("mohan332455");
+  //    k2.then((res))
+
+  // })
+
+      // OR
+// // but parallel printing hogi
+//   console.log("checking for username");
+//   async2("mohan324").then((res)=>{
+//     console.log(res);
+//   })
+//   console.log("checking for password");
+//   async3("mohan3456").then((res)=>{
+//     console.log(res)
+//   })
+
+// this way first username then password
+//promise chain
+// console.log("checking for username");
+//   async2("mohan324").then((res)=>{
+//     console.log(res);
+//     console.log("checking for password");
+//     async3("mohan@12113").then((res)=>{
+//      console.log(res);
+//     });
+//   })
+
+  
+                      //Async Await\\
+
+  // Async :- aync function always return a promise
+  // await pauses the execution of its surrounding async function until the promise is settled
+
+  // async function wish(name){
+  //   console.log(`hey! ${name} nice to meet you`);
+  // }
+  // // run the function in console , you will see a promise for this function.
+
+  //   function api(){
+  //     return new Promise((resolve,reject)=>{
+  //       setTimeout(()=>{
+  //         console.log("Searching...");
+  //         resolve(200); // 200 is for success
+  //       },2000);
+
+  //     });
+  //   }
+   
+  //   async function weather(){
+  //     await api();  // 1st call
+  //     await api();  // 2nd call
+  //   }
+  //   console.log(weather());
+
+   
+  // IIFE :- 
+    
+  </script>
+ </body>
+ </html>

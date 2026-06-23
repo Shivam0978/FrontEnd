@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homework</title>
+  <style>
+    .heading  {
+      align-items: center;
+      display: flex;
+     flex-direction: column;
+      margin :100px 0 0 0;
+    }
+
+    #name{
+      border : 2px solid black;
+      height:30px;
+      width:200px;
+      border-radius: 4px;;
+    } 
+    .click{
+      height:50px;
+      width:100px;
+      border-radius:10%;
+      font-size: larger;
+      align-items: center;
+    margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">
+  <h2 >Name: <input type="text" id ="name" placeholder="Enter your name"></h2>
+  <button class="click" onclick="greeting() ; countClick(); colorChanger()" > Click</button>
+  <h1 id="greeting"></h1>
+  </div>
+  <script>
+    let count = localStorage.getItem("count")|| 0 ; 
+
+    // giving input in js
+   /*let name = prompt("Enter your name: ");
+    console.log(name);*/
+
+
+    function countClick(){
+      count ++;
+      localStorage.setItem("count", count);
+     let cnt = document.querySelector(".click");
+     
+     cnt.innerText = count; 
+     cnt.style.fontSize = "40px" ;
+      
+    }
+    function colorChanger(){
+      let btn = document.querySelector(".click")
+      if (count<=10) {
+        btn.style.backgroundColor="lightblue";
+      }
+      else if ( count>10 && count<=20){
+        btn.style.backgroundColor="lightgreen";
+      }
+      else if ( count>20 && count<=30){
+        btn.style.backgroundColor="yellow";
+      }
+      else if ( count>30 && count<=40){
+        btn.style.backgroundColor="orange";
+      }
+      else if( count>40 && count<50){
+      btn.style.backgroundColor ="red";
+      }
+      else if( count >50 && count<100){
+        btn.style.width ="200px";
+        btn.innerText = "Bass Bhai "+count;
+        btn.style.fontSize ="20px";
+      btn.style.backgroundColor="darkred";
+      }
+    else if( count >100 ){
+      btn.style.width ="200px";
+        btn.innerText = "Ruk ja bsdk "+count;
+        btn.style.fontSize ="20px";
+      btn.style.backgroundColor="darkred";
+    }
+
+    }
+
+    function greeting(){
+  let user = document.getElementById('name').value;
+ let date= new Date();
+ let hour = date.getHours();
+  console.log(date.getHours());
+  let wishing = document.querySelector('#greeting');
+
+  if (hour > 3 && hour < 12 ){
+    wishing.innerText = `Good Morning, ${user}`;
+  }
+  else if (hour > 12 && hour <15){
+    wishing.innerText = `Good Afternoon, ${user}`;
+  }
+else if (hour > 15 && hour<19){
+   wishing.innerText = `Good Evening, ${user}`;
+}
+
+else 
+   wishing.innerText = `Good Night, ${user}`; 
+
+    }
+
+ console.log(hour);
+
+  </script>
+  
+</body>
+</html>
+
+
+                      <!--Sir Code-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sir code</title>
+  <style>
+    .js-odd{
+      background-color:red;
+      font-weight: 400;
+    }
+    .js-even{
+      background-color: blue;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <h3 id="greeting"></h3>
+  <button id="my-button" onclick="buttonPressed()" >0</button>
+  <script>
+    let click = 0;
+function buttonPressed(){
+click ++;
+updateColor();
+
+}
+function updateColor(){
+  let button = document.querySelector('#my-button');
+button.innerText = click;
+if (click %2 === 0){
+  button.classList.remove('js-odd');
+  button.classList.add('js-even');
+}
+else { 
+  button.classList.remove('js-even');
+  button.classList.add('js-odd');
+ 
+}
+}
+function Greeting(personName){
+  let date = new Date();
+  let hours = date.getHours();
+  let heading = document.querySelector('#greeting');
+
+  if (hour > 3 && hour < 12 ){
+    wishing.innerText = `Good Morning ${personName}`;
+  }
+  else if (hour > 12 && hour <15){
+    wishing.innerText = `Good Afternoon ${personName}`;
+  }
+else if (hour > 15 && hour<19){
+   wishing.innerText = `Good Evening ${personName}`;
+}
+
+else 
+   wishing.innerText = `Good Night ${personName}`;
+}
+
+Greeting('Shivam')
+
+
+  </script>
+</body>
+</html>

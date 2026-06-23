@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jshe5</title>
+</head>
+<body>
+  <script>
+    //   1
+    let arr=[5,6];
+    arr.unshift(4);
+    arr.push(7);
+    console.log(arr);
+    //   2
+    /*let a=0;
+    let arr1=[2,3,4,5,6,7,1,8,9];
+    function pos(num){
+      for(let i=0;i<arr1.length;i++){
+        if (arr1[i]===num){
+          console.log(`${num} is found at ${i+1}`);
+          a++;
+          break;
+        }
+    }
+    if(a===0){
+       console.log(`no ${num} is there`);
+    }
+  }*/
+ let arr1=[2,3,4,5,6,7,1,8,9];
+ function pos(num){
+  console.log(`${arr1[num-1]} is at position ${num}`);
+ }
+ console.log(pos(5));
+
+ //   3
+ // slice operation works like splice ,just ye kaat ke alag show krta hai
+ let arr2 = [2,3,4,5,6,7,1,8,9]
+ function copy(arr){
+
+  return arr.slice(0,arr2.length);
+ }
+ console.log(copy(arr2));
+let arr3 =copy(arr2);
+
+//    4
+let total=0;
+function prime(b){
+  let count =0 ;
+for(let i =2;i<b;i++){
+  for(let j=2;j<i;j++){
+
+  if (i%j ===0){
+    count++;
+  }
+}
+  if (count===0){
+    console.log(`${i} is prime`);
+    total++;
+  }
+count = 0;
+
+/*if (total===5){
+  break;
+}*/
+}
+}
+
+console.log(prime(9))
+
+//   
+let arr4 = [1,-6,5,7,-98];
+function positive(arr){
+console.log(`positive elements are: `);
+for(let i =0; i<arr.length;i++){
+  if(arr[i]<0){
+    continue;
+  }
+  else{
+    console.log(`${arr[i]}`);
+  }
+}
+}
+positive(arr4)
+
+//   8
+
+let arr5=['hello','earth','unknown','here'];
+function writer(arr){
+  let words='';
+for(let i=0;i<arr.length;i++){
+  words = words +" "+ arr[i];
+}
+console.log(words);
+}
+writer(arr5)
+
+//OR
+// console.log(arr5.join(" "));
+
+  </script>
+</body>
+</html>

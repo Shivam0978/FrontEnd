@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if else
+        let age=8
+        console.log(age);
+        if(age){
+            console.log('you are human');
+        }
+        else{
+            console.log('you are not human')
+        }
+
+        let marks= 86;
+        let result;
+        if(marks>80){
+            result='Excellent';
+
+        }
+        else if(marks>=70 && marks<80){
+            result='good but can do better';
+        }
+        else if(marks>=50 && marks<70){
+            result='Work hard';
+        }
+
+        console.log(`your final result is ${result}`)
+
+        // function
+        // you can create functions in functions 
+        function grader(){
+            let marks = prompt("Enter you marks");
+
+            if(marks>=85){
+                console.log(`your grade is A+`);
+            }
+            else if(75<=marks && marks<85){
+                console.log(`your grade is A`);
+            }
+             else if(65<=marks && marks<75){
+                console.log(`your grade is B+`);
+            }
+             else if(55<=marks && marks<65){
+                console.log(`your grade is B`);
+            }
+
+        }
+        //grader()
+
+        function sum(a,b){
+            let sum = a+b;
+            return sum;
+        }
+        let num = sum(5,8);
+        console.log(num);
+
+        function greet(name= 'dear'){
+            console.log(`welcome ${name}`);
+        }
+        greet('shivam');
+
+        function oddeven(a){
+            let c = a%2;
+            if(c==0){
+                console.log(`${a} is even`);
+            }
+            else{
+                console.log(`${a} is odd`);
+            }
+        }
+        oddeven(7);
+
+        function larger(a,b){
+            if(a>b){
+                console.log(`${a} is larger`);
+            }
+            else{
+                console.log(`${b} is larger`);
+            }
+
+        }
+        larger(6,22);
+
+        function temp(c){
+            f=(9/5)*c +32;
+            
+            console.log(`${f} in fahrenheit`);
+        }
+        temp(45)
+
+        function smaller(a,b){
+            if(a>b){
+                return b;
+            }
+            else{
+                return a;
+            }
+
+        }
+
+        console.log(smaller(6,2))
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

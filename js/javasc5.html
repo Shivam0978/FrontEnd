@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and loop</title>
+</head>
+<body>
+  <script>
+     //          // Array \\
+    let arr = [3,4,5,6,'shivam',45];
+    let obj= {ram : 2405};
+    console.log(arr);
+    console.log(arr[4]);
+     // ArrayisArray is used to determine whether a obj is array or not
+    console.log(Array.isArray(arr));
+    console.log(typeof arr);    
+    console.log(arr.length);
+
+    // push and pop
+    let vrr1 =[45,7,8,9,2,'madhav'];
+    console.log(vrr1);
+    vrr1.push(6);
+    vrr1.push(5,7);
+    console.log(vrr1);
+    vrr1.pop();
+    console.log(vrr1);
+    console.log('removed ' + vrr1.pop())
+    console.log(vrr1);
+
+    // unshift/shift (use to add/remove at the starting)
+ let vrr2 =[45,7,8,9,2,'keshav'];
+    console.log(vrr2);
+    vrr2.unshift(6);
+    vrr2.unshift(2,4);
+    console.log(vrr2);
+    vrr2.shift();
+    console.log(vrr2);
+    // splice (add at any point)
+   let vrr3 = [45,7,8,9,2,'mohan']
+   vrr3.splice(2,1); // (kaha se remove krna hai, kitna remove krna hai)
+  console.log(vrr3);
+   let vrr4 = [45,7,8,9,2,'mohan']
+  vrr4.splice(2,3);
+  console.log(vrr4);
+
+  // toString
+  let arr2 =[3,4,5,6,'krishna',45]
+  console.log(arr2.toString());
+
+// sorting
+let arr3 = [3,5,6,7,3,2,45,6,8,9,1];
+console.log(arr3);
+arr3.sort();
+console.log(arr3);
+
+// value Of (create a copy of an array)
+    let arr4 = [3,5,6,7,3,2,45,6,8,9,1];
+   let arr5 = arr4.valueOf();
+    console.log(arr5);
+
+    // while arrc = arr4 will make a reference not copy i.e change in arrc will also be seen in arr4 
+    let arrc=arr4;
+    console.log(arrc);
+    arrc[3]=420;
+    console.log(arr4); // change occur
+
+  //   De Structuring of array
+let des = [1,2,3,4,5];
+let [a,b,c,d] = des;
+console.log(a + " " + b + " " + c + " "+ d);
+ /* here a,b,c,d is assigned as the value in des from index 0 */
+
+//                 // Loop \\
+//while loop
+let num =0;
+while(num<=10){
+  console.log(num);
+  num++
+}
+
+/* let x=0;
+while (x<=1){
+  console.log(x);
+   x = Math.random()*2;
+} */
+
+// do while
+let num1=0;
+do{
+  console.log("num is " + num1);
+  num1++;
+} 
+while(false);  // it will run atleast one
+
+// for loop
+let n =5;
+for (let i =0 ; i<n ; i++){
+  for ( let j =0 ; j<n-i;j++){
+    console.log(j);
+  }
+}
+
+let rem=[2,4,55,66,77,33,23,6];
+for(let i = 0;i<rem.length ; i++){
+  console.log(rem[i]);
+}
+
+  //                  //accumulator pattern
+  // creating the sum of elements in array
+  let sum =0;
+  
+  let array = [ 1,2,3,4,5,67,8,4];
+  for ( let i=0;i<array.length ; i++){
+    sum = sum +array[i];
+  }
+  console.log("The sum is: " + sum);
+
+  // creating the square of array
+  let sqr=[];
+  let s = [ 1,2,3,4,5,6,7,8,9];
+  for(let i=0 ; i<s.length; i++){
+    sqr[i] = s[i]*s[i];
+  }
+  console.log(sqr);
+
+  // break and continue
+  let q =0;
+  let arr10 =[1,2,3,4,2,8,3,52,5,8,7,2,6,7,4,7,8,2];
+  for(let i = 0;i<arr10.length;i++){
+
+    if( arr10[i]===8){
+      console.log(`8 has been found at ${i+1}`);
+      q++;
+      break;
+    }
+  }
+  if(q===0){
+ 
+      console.log(`8 is not there`);
+    }
+  
+    //printing only even  (continue will pass that iteration)
+let l=10;
+    for(let f =0 ; f<=l;f++){
+      if(f%2==1){
+        continue;
+      }
+console.log(f);
+    }
+  
+   
+  
+
+  
+     
+    
+    
+
+  
+
+  </script>
+</body>
+</html>

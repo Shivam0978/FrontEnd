@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level5</title>
+    <style>
+        .ordered{
+            color:chocolate;
+        }
+    </style>
+</head>
+<body>
+    <ol class="ordered">
+        <li>physics</li>
+        <ol type="i">
+            <li>motion</li>
+            <li>pw</li>
+        </ol>
+        <li>chemistry</li>
+        <li>maths</li>
+        <li>biology</li>
+    </ol>
+    <ul type="square">
+        <li> C </li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>MATLAB</li>
+        <li>frontend</li>
+       <ol type="1">
+        <li>html</li>
+        <li>css</li>
+
+       </ol>
+    </ul>
+    <main>
+        <table border="2">
+            <caption>Student information</caption>
+            <tr>
+            <th>Name</th>
+            <th>Reg. No.</th>
+            <th>Branch</th>
+            </tr>
+            <tr>
+                <td>shivam</td>
+                <td>20254142</td>
+                <td>ECE</td>
+            </tr>
+            <tr>
+                <td>shanju</td>
+                <td>20253442</td>
+                <td>PIE</td>
+            </tr>
+            <tr>
+                <td>pantak</td>
+                <td>20250942</td>
+                <td>CS</td>
+            </tr>
+            <tr>
+                <td colspan="3">all are toppers(above 9.5CG)</td>
+            </tr>
+             </table><br>
+            <form action="/data.php">
+               
+                Name:-<input type="text" placeholder="enter your name" name="username" required="true">
+                <br>
+                
+                Password:-<input type="password" name="password">
+                <br>
+                <label >Mob no.:-</label>
+                <input type="number" placeholder="enter your number" name="mob no">
+                <br>
+                <label for="date">Date:-</label>
+                <input id="date" type="date">
+                <br>
+                <input type="submit">
+                <br>
+                Photo(passport size)<input type="file">
+                <br>
+                color:-<input type="color">
+                <br>
+                Income(Annual):-<input type="range">
+                <br>
+ <!--using id in input and for in label we can connect both-->
+                Gender <br>
+                <label for="male">Male</label>
+                <input id="male" name="gender" type="radio" value="male">
+                <br>
+                <label for="female">Female</label> 
+                <input id="female" name="gender" type="radio" value="female">
+                <br>
+                <label>Other</label><input name="gender" type="radio" value="female">
+                <br>
+                Subjects:-
+                physics<input type="checkbox">
+                chemistry<input type="checkbox">
+                maths<input type="checkbox">
+                bio<input type="checkbox">
+                history<input type="checkbox">
+                geography<input type="checkbox">
+                <br>
+                <label for="state">State</label>
+               <select>
+                 <option>Bihar</option>
+                <option>MP</option>
+                 <option>Delhi</option>
+                <option>Assam</option>
+               </select>
+                <br>
+                <textarea rows="6" col="55" name="write" id="write">
+write something about you
+                </textarea>
+                <br>
+                Submit <input type="submit">
+                <br>
+                for more info <a href="practice2.html" target="_blank"> <input type="button"  value="click here"></a>
+                <br>
+               
+            </form>
+             <button>NEXT</button>
+       <iframe height="400" width="800" src="https://youtube.com/"></iframe>
+    </main>
+</body>
+</html>

@@ -1,0 +1,90 @@
+*{
+    padding:0; 
+    margin:0;
+}
+#qu1{
+    background-color: gold;
+    color:rgba(34,56,75,0.75);
+}
+#box{
+    height:150px; width:150px;
+background-image: url(yt.jpg);
+background-size: contain;
+
+}
+#font{
+    font-family:fantasy;
+}
+#padded1{
+    height: 100px;
+    width:100px;
+    background-color: darkgray;
+    padding: 60px 40px 40px 40px;
+    margin: 10px 30px 10px 100px;
+    /*Top,Rht,Bottom,Lft*/
+    border: 2px solid blue;
+
+}
+#padded2{
+    height: 100px;
+    width:100px;
+    background-color: rgb(253, 152, 152);
+    padding: 60px 40px 40px 40px;
+    margin: 10px 10px 10px 40px;
+    border: 2px dotted darkcyan;
+}
+#border{
+    height:100px;
+    width:100px;
+    padding:50px 10px 10px 50px;
+    margin: 50px 10px 10px 200px;
+    border: 3px dashed red;
+    border-radius:45px 45px 10px 10px;
+    background-color: aqua;
+}
+#but{
+    height:100px;
+    width:100px;
+    background-color: black;
+    color:aliceblue;
+    padding: 10px 15px;
+    border: 2px dotted red;
+    border-radius: 100%;
+}
+#head{
+        background-color:beige;
+        text-align: center;
+        text-decoration:underline;
+        text-decoration-style: double;
+        text-transform: capitalize;
+    }
+#bag{
+    color:rgb(1, 20, 20);
+    background-color: chartreuse;
+    font-size: large;
+    border:2px dashed rgb(24, 24, 1);
+    border-radius: 20px;
+    padding:10px
+
+}
+#wishlist{
+      color:rgb(1, 20, 20);
+    background-color: rgb(234, 142, 38);
+    font-size: large;
+    border:2px dashed rgb(21, 21, 1);
+    border-radius: 20px;
+    padding:10px
+
+}
+#sale{
+    color:rgb(1, 20, 20);
+    background-color: chartreuse;
+    font-size: large;
+    border:2px dashed rgb(24, 24, 1);
+    border-radius: 20px;
+    padding:10px
+
+}
+#item{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

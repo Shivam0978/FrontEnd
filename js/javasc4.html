@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javasc4</title>
+</head>
+<body>
+  <button class="mybutton"></button>
+  <div class="Mydiv">this is a div</div>
+  <script>
+    //json
+    let product = {
+      name :'Myka',
+      category:'shirt',
+    price: 500,
+    rating: 4.6
+
+    };
+console.log(typeof product);
+console.log(product);
+let str = JSON.stringify(product);
+console.log(typeof str);
+console.log(str);
+let original =JSON.parse(str);
+console.log(original);
+
+// storage
+
+localStorage.setItem('name', 'Myka');
+localStorage.setItem('price' , '500');
+
+console.log(localStorage.getItem('name'));
+
+localStorage.setItem('product',JSON.stringify(product) );
+console.log(localStorage.getItem('product'));
+let product2 = JSON.parse(localStorage.getItem('product'));
+console.log(product2);
+
+localStorage.removeItem('price');
+//localStorage.clear();
+
+// date
+let myDate = new Date();
+console.log(myDate);
+console.log(myDate.getFullYear());
+console.log(myDate.getHours());
+console.log(myDate.getDay());
+console.log(myDate.getDate());
+console.log(myDate.getTime());
+
+// DOM (Document Object Model)
+console.log(document.location);
+console.log(document.title = 'JaVAsc4');
+console.log(document.domain);
+       //can add class//
+console.log(document.querySelector('button').classList);
+console.log(document.querySelector('button').classList.add('your-button'));
+console.log(document.querySelector('button').classList);
+      //can add or remove element
+let button =document.createElement('Button');
+let div = document.createElement('Div');
+button.innerText = 'click';
+document.querySelector('.Mydiv').appendChild(button).appendChild(div);
+div.innerText = "this is a button";
+document.querySelector('.Mydiv').appendChild(button).removeChild(div);
+// can also use replaceChild
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

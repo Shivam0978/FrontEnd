@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+// object
+        let student={
+            name:'Shivam',
+            regno:20254134,
+            branch:'CSE',
+            'cpi':9.6,
+
+        };
+
+        console.log(typeof student);
+        console.log(student);
+        console.log(student.regno);
+        student.regno='20254148';
+        console.log(student.regno);
+        console.log(student['branch']);
+        let cgp = 'cpi';
+        console.log(student.cgp); // undefined
+         console.log(student[cgp]);
+
+         delete student.branch;
+         delete student['cpi'];
+         console.log(student)
+
+          let candidate={
+            name:'Shivam',
+            regno:20254134,
+            branch:'CSE',
+            'cpi':9.6,
+            details:{
+                hobby:'cricket',
+                club:'coding',
+                committee:'sports',
+
+                profile:{
+                    nationality:'indian',
+                    city:'delhi',
+                    income:'5LPA',
+                },
+            },
+                eligible: function(){
+                    if(candidate.cpi>=8.5){
+                        return 'you are eligible for internship';
+                    }
+                    else{
+                        return 'you are not eligible for internship';
+                    }
+            
+           },
+          
+        };
+
+   console.log(candidate.eligible());
+     console.log(`student branch is ${candidate.branch}`);
+
+// auto boxing
+
+ console.log(`hey there, i am shivam`.repeat(2));
+ console.log(`hey there, i am shivam`.toUpperCase());
+
+// object copy
+ let a =2;
+ let b = 6;
+ console.log (`a=${a} b= ${b}`);
+ a= 4;
+ console.log (`a=${a} b= ${b}`);
+
+ let x = {num:6};
+ let y = x;
+ console.log(`x =${x.num} y=${y.num}`);
+ x.num=9;
+ console.log(`x =${x.num} y=${y.num}`);
+
+// object reference
+let p = {pop : 'abcd'};
+let q= { pop : ' abcd'};
+console.log(p==q);
+console.log(p===q);
+
+// object shortcuts
+ let boy={
+            name:'Shivam',
+            regno:20254134,
+            branch:'CSE',
+            'cpi':9.6,
+ };
+
+ let {name , branch, cpi} = boy;
+ console.log( `${name} is the student of mnnit`);
+ console.log( `${branch} is his branch `)
+
+// see shorthand method of image 2 and 3 in page 111
+
+// practice
+product = {
+    name:'bata',
+    price: 1500,
+    discout: 0.20,
+    warranty:'1 year',
+    'delivery-time' : 'within 3 days',
+    finalprice : function(){
+       let final = this.price - (this.price*this.discout);
+        console.log(`final price is ${final}`);
+    }
+
+}
+product.finalprice();
+let copyproduct = product;  // copyproduct is the reference of product so any change in any one changes both
+console.log(product);
+copyproduct.name = 'nykee';
+console.log(product);
+copyproduct.price= 1100;
+console.log(product);
+
+console.log(product['delivery-time']);
+
+let notification = {
+    message: 'good job',
+    status: 'completed',
+};
+console.log(notification.message , notification.status );
+// de structuring
+
+let {message , status} = notification ;
+console.log(message);
+console.log(status);
+
+function identicalproduct(product1, product2){
+    if (product1 == product2){
+        return true;
+    }
+    if(typeof product1=='object' || typeof product2=='object') {
+        return false;
+
+    }
+    if (product1.name === product2.name && product1.price === product2.price &&
+    product1.discount === product2.discount
+
+     ){
+        return true;
+     }
+}
+
+product1 = {
+    name:'bata',
+    price: 1500,
+    discout: 0.20,
+    warranty:'1 year',
+    'delivery-time' : 'within 3 days',
+}
+product2 = {
+    name:'bata',
+    price: 1500,
+    discout: 0.20,
+    warranty:'1 year',
+    'delivery-time' : 'within 3 days',}
+
+    console.log(identicalproduct(product , product1))
+
+
+
+    </script>
+</body>
+</html>

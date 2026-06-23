@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="hw.css">
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    .a{
+        text-decoration: none;
+    }
+    #img{
+        border: 2px solid black;
+        height:300px;
+        width:400px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+
+    }
+    #contain{
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+</head>
+<body id="font">
+   <header><div id="qu1">this is the first que</div>
+    <div id="box"></div></header>
+    <p id="head">FITSTREAK</p>
+    <i class="fa-brands fa-linkedin" style="font-size: 30px;"></i>
+    <br>
+    <i class="fa-brands fa-github" style="font-size:40px"></i><br>
+    <br><br><br><br>
+    <span id="padded1">padding1</span>
+    <span id="padded2">padding2</span><br>
+    <div id="border">border</div><br>
+    <button id="but">button</button><br><br>
+    <button id="bag" onclick="cartQuantity=cartQuantity+1; document.querySelector('#item').innerText='Your bag has '+ cartQuantity+' items';">Add to bag</button>
+    <button id="wishlist" onclick="cartQuantity=cartQuantity-1; document.querySelector('#item').innerText='Your bag has '+ cartQuantity+' items';">Wishlist</button>
+    <button id="sale">Add 1+1 Sale Item</button>
+    <h1 id="item"></h1>
+    <header>
+        <nav  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: bisque; display: flex; justify-content: space-evenly;">
+            <a class="a" href="#"> Home</a>
+              <a class="a" href="#"> Contact</a>
+              <a class="a" href="#"> Support</a>
+              <a class="a" href="#"> About us</a>
+
+        </nav>
+    </header>
+    <main>
+        <div id="contain">
+        <div id="img">
+            <img src="../css/meesho.jpg" height=300px>
+        </div>
+        </div>
+    </main>
+    <script src="hw.js">
+       
+    </script>
+</body>
+</html>

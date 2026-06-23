@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API</title>
+</head>
+<body>
+  <button class="btn">MORE INFO</button>
+  <div class="fact"></div>
+  <script>
+
+                              // Fetch API(Application programming Interface)
+   // the fetch API provides an interface for fetching (sending/receiving) resource 
+   const URL = "https://dragonball-api.com/api/characters/1";
+
+   let goku = document.querySelector(".fact");
+   let button = document.querySelector(".btn");
+   
+            // by async await
+  //  let getApi = async ()=>{
+  //    console.log("getting data...");
+  //   let response = await fetch(URL);
+  //   console.log(response);
+  //   let data = await response.json();
+  //   console.log(data);
+  //  // goku.innerText = JSON.stringify(data,null,2)
+  //  goku.innerText = JSON.stringify(data.transformations[3],null,2)
+  //  }
+  //  console.log(getApi());
+
+  //  let getApi2 =async ()=>{
+  //   let response = await fetch(URL);
+  
+  //   let data = await response.json();
+
+  //  goku.innerText = JSON.stringify(data,null,2)
+  //  }
+ // button.addEventListener("click",getApi2);
+
+             // by promise chain
+  function getApi(){
+    fetch(URL)
+    .then((response )=> {
+      return response.json();
+    })
+    .then((data)=>{
+      console.log(data);
+      goku.innerText = JSON.stringify(data.transformations,null,2)
+
+    })
+  }
+  console.log(getApi());
+
+   button.addEventListener("click",getApi);
+
+
+   
+   
+   //   AJAX(Asynchronous JavaScript and XML) :- so pehle kya hota tha ki API ka response JS & XML form me aata tha so for that we need to learn the XML also.)
+   // JSON/AJAJ (Asynchronous JavaScript and JSON) now ab we dont need to learn XML additionally , JSON provide the response in JSON format ,can be converted in js using json() method)
+
+   // Request and Response
+
+
+  </script>
+  
+</body>
+</html>

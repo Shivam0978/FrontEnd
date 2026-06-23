@@ -1,0 +1,197 @@
+
+ .heading{
+     text-align: center;
+      margin-top:2%;
+      font-style: oblique;
+      font-weight: 550;
+      font-size: 50px;
+      color:rgb(26, 4, 87);
+     
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+.Items-display{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-left: 4%;
+  row-gap: 25px;
+}
+
+.todoRow{
+  display:grid;
+  grid-template-columns: 200px 150px 100px 100px 35px 115px;
+  column-gap:10px;
+  align-items:center;
+  
+}
+    
+    .delete{
+      background-color: rgb(201, 6, 6);
+      height:42px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 17px;
+      cursor:pointer;
+      color:rgb(5, 20, 32);
+      
+    }
+    .delete:hover{
+      background-color:rgb(172, 8, 8);
+    }
+    .goalAdder{
+      margin-top:20px;
+       display: grid;  /* display in column-gap*/
+      grid-template-columns:  200px 150px  100px 100px 50px;
+      margin-bottom: 70px;
+      column-gap: 30px;
+      margin-left: 4%;
+      
+
+    }
+    .adding{
+      background-color: rgb(8, 136, 94);
+      color:aliceblue;
+      height:41px;
+      width:85px;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 17px;
+      cursor:pointer;
+    }
+    .adding:hover{
+      background-color: rgb(8, 103, 8);
+    }
+    .firstTodo{
+      height:40px;
+      width:200px;
+      border:2px solid black;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 550;
+    }
+    .firstdate{
+      height:40px;
+      width:150px;
+      border:2px solid black;
+      border-radius: 5px;
+       font-size: 20px;
+      font-weight: 550;
+      color:grey;
+      align-items: center;
+    }
+    .items{
+      font-size: 22px;
+      font-weight: 550;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+      font-style:oblique;
+     
+    }
+    .whole{
+      display: flex;
+      justify-content: center;
+    }
+    .firsttime{
+       height:40px;
+      width:100px;
+      border:2px solid black;
+      border-radius: 5px;
+       font-size: 20px;
+      font-weight: 550;
+      color:grey;
+      align-items: center;
+    
+    }
+
+.headstatus{
+  margin-top: 18%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+
+}
+.tick{
+  background-color: white;
+  border-color: white;
+  font-size: 25px;
+}
+.cross{
+  background-color: white;
+  border-color: white;
+  font-size: 25px;
+  margin-left: 80px;
+}
+.spantick{
+ 
+margin-left: 70px;
+}
+
+.todoWrapper{
+ 
+}
+
+.completed{
+  background-color: rgb(93, 252, 93);
+  animation: greenFlicker 1s infinite;
+  width:450px;
+  border-radius: 4%;
+}
+.failed{
+  background-color: rgb(251, 183, 183);
+  animation: redFlicker 1s infinite;
+  width:450px;
+  border-radius:4%;
+}
+.clearStatus{
+  background-color: rgb(80, 83, 239);
+  color:white;
+  border-radius: 100%;
+  font-size: 24px;
+  margin-top: 5px;;
+}
+.clearAll{
+  background-color: rgb(239, 80, 128);
+  color:white;
+  border-radius: 100%;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-left:15%;
+}
+
+@keyframes greenFlicker{
+  0%{
+    background-color: rgb(27, 250, 79);
+  }
+  25%{
+    background-color: rgb(159, 246, 159);
+  }
+  50%{
+    background-color: rgb(100, 241, 100);
+  }
+  100%{
+    background-color: rgb(53, 241, 53);
+  }
+  
+}
+@keyframes redFlicker{
+  0%{
+    background-color: rgb(242, 228, 228);
+    opacity:0.25;
+  }
+  25%{
+    background-color: rgb(250, 176, 180);
+    opacity:1;
+  }
+  50%{
+    background-color: rgb(245, 124, 124);
+    opacity:0.75;
+  }
+  100%{
+    background-color: rgb(254, 89, 89);
+    opacity:1;
+  }
+}
+
+
+
+

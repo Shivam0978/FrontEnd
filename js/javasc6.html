@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javasc6</title>
+</head>
+<body>
+  <button class="click">Click here</button>
+  <script>
+
+
+    //        Anonymous function
+    // function can also express by
+    let mul = function(num1,num2){
+      return num1 * num2 ;
+
+    };
+    console.log(mul(3,6));
+
+  let into = mul;
+  console.log(into(5,7));
+
+
+  let dice = function(){
+    console.log(`dice is rolling...`);
+    let a= Math.floor(Math.random()*6)+1;
+    
+      console.log(`you got ${a}`);
+  }
+  console.log(dice());
+
+  let sum = function(num1,num2){
+    return num1+num2;}
+
+  let sum3num = function(num1,num2,num3,sum){
+    let sum1 = sum(num1,num2);
+    return sum(sum1,num3);
+  }
+  console.log(sum3num(4,6,7,sum));
+
+
+  console.log(dice());
+  // function can also be a data type
+
+  let per =(num1,num2)=>{
+    console.log(`${num1} is ${(num1/num2)*100}% of ${num2}`);
+  }
+  
+  per(54,69);
+  //                 // setTimeout & setInterval\\
+  //             setTimeout
+
+let fun0 = function(){
+  console.log('check');
+}
+let fun1 = function(){
+  console.log('kya dekh rha hai be!');
+}
+let fun2 = function(){
+  console.log('chutiya hai kya!');
+}
+let fun3= function(){
+  console.log('chala ja');
+}
+let fun4 = function(){
+  console.log('chala ja b**k');
+}
+//setTimeout(fun0,10000);
+setTimeout(fun1,1000);
+setTimeout(fun2,3000);
+setTimeout(fun3,5000);
+setTimeout(fun4,8000);
+let timeID = setTimeout(fun0,10000);  // ye bhi show hoga
+//console.log(`timeID is ${timeID}`);
+clearTimeout(timeID);
+
+//            setInterval (continuously  )
+
+let fun5 =function(){
+  console.log('warning');
+
+}
+//setInterval(fun5,5000);   //1
+let intervalID = setInterval(fun5,5000);  //2
+clearInterval(intervalID);  // (yaha 1 and 2 dono jagah function call ho rha h so clear just stop one of them so for both , should have to remove any one  )
+let interID = setInterval(fun5,5000);  //2
+
+ setTimeout(()=> clearInterval(interID),15000);
+ // ideally this line runs the warning 3 times and then stops it 
+
+ //                //Event Listener\\
+
+let button = document.querySelector('.click');
+let activity = function(){
+  console.log('clicked');
+}
+let printDate = function(){
+ 
+  console.log(new Date());
+}
+button.addEventListener('click',printDate);
+button.addEventListener('click',activity);
+
+button.removeEventListener('click', printDate )
+
+
+  </script>
+</body>
+</html>

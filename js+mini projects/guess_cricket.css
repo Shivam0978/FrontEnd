@@ -1,0 +1,24 @@
+*{
+    background-color: bisque;
+    box-sizing: border-box;
+}
+
+#heading{
+text-align: center;
+color:blue;
+background-color:rgb(158, 245, 180);
+padding:10px;
+}
+
+#back{
+    font-weight: 600;
+    border-radius: 5px;
+    width:50px;
+    background-color: seashell;
+    
+    
+}
+.back{
+    align-items: center;
+   
+}
